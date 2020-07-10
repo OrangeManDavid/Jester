@@ -1,23 +1,11 @@
 {
   "name": "jester",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/OrangeManDavid/Jester.git"
-  },
-  "author": "",
+  "repository": "https://github.com/lyyyd/jester.git",
+  "author": "OrangeManDavid <david.jackson.lyd@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/OrangeManDavid/Jester/issues"
-  },
-  "homepage": "https://github.com/OrangeManDavid/Jester#readme",
   "devDependencies": {
-    "cypress": "^4.8.0",
-    "xlsx": "^0.16.2"
+    "cypress": "^4.10.0"
   }
 }
