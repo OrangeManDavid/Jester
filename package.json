@@ -1,11 +1,12 @@
 {
-  "name": "jester",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/lyyyd/jester.git",
-  "author": "OrangeManDavid <david.jackson.lyd@gmail.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "cypress": "^4.10.0"
-  }
+    "name": "jester",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/lyyyd/jester.git",
+    "author": "OrangeManDavid <david.jackson.lyd@gmail.com>",
+    "license": "MIT",
+    "devDependencies": {
+        "cypress": "^4.11.0",
+        "xlsx": "^0.16.4"
+    }
 }
