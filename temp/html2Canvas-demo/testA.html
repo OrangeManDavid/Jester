@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript">
+    $(function() {
+        html2canvas(document.querySelector("#capture")).then(canvas => {
+            document.body.appendChild(canvas)
+        });
+    });
+</script>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>html2canvas example</title>
+    <script type="text/javascript" src="html2canvas.js"></script>
+</head>
+<body>
+    <div id="gallery" style="padding: 20px; background: #f5da55">
+        <div id="captureinner" style="padding: 10px; background: #FF3366; margin:10px 0px -10px 0px;">
+            <h4 style="color: #000; ">Hello world!</h4>
+            <button>点我截屏</button>
+            <div id="box"></div>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+    $(function() {
+        html2canvas(document.querySelector("#capture")).then(canvas => {
+            document.body.appendChild(canvas)
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+
+        html2canvas(document.getElementById('gallery'), { 
+            onrendered: function (canvas) { 
+                var canvasData = canvas.toDataURL(); 
+                var eg = new Image(); 
+                eg.src = canvasData;
+                $("button").on("click", function () {
+                    $box = $("#box");
+                    $box.prepend(eg);
+                })
+            }, 
+            // useCORS: true// 此代码针对跨域问题 
+        });
+    })
+</script>
+</html>

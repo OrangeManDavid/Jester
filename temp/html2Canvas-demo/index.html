@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>html2canvas-demo</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <div id="gallery">
+        <div id="capture" style="background: #f5da55; padding:40px">
+            <div id="captureinner" style="background: #FF3366; margin : 40px 0px -40px 0px;">
+                <h4 style="color: #000; ">Hello world!</h4>
+            </div>
+        </div>
+    </div>
+    <button type="button" name="button" onclick="convert()">开始生成</button>
+    <div id="box"></div>
+</body>
+</html>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/html2canvas.js"></script>
+
+<script>
+    $(document).ready(function () {
+        html2canvas(document.getElementById('gallery'), { 
+            onrendered: function (canvas) { 
+                var canvasData = canvas.toDataURL(); 
+                var eg = new Image(); 
+                eg.src = canvasData;
+                
+                $("button").on("click", function () {
+                    $box = $("#box");
+                    $box.prepend(eg);
+                })
+
+                canvas.toBlob(function(blob) {
+                    saveAs(blob, "hangge.png");
+                });
+            }, 
+            // useCORS: true// 此代码针对跨域问题 
+        });
+
+
+    })
+</script>
