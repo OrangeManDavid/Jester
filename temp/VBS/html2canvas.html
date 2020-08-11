@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html2canvas</title>
+    <script src="http://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body>
+    <h1>html内容</h1>
+    <div id="htmlcanvas" style="padding: 10px; background: red">
+        <h4 style="color: #fff; ">one！two！!three!!!</h4>
+        <h2 style="text-align:center;">那一瞬间有一百万可能</h2>
+    </div>
+    <h1>canvas内容</h1>
+    <div id="canid"></div>
+    <script>
+        html2canvas(document.querySelector("#htmlcanvas")).then(canvas => {
+            document.getElementById("canid").appendChild(canvas);
+        });
+    </script>
+</body>
+</html>

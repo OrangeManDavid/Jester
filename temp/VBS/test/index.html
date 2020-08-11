@@ -1,0 +1,16 @@
+<section class="one-yuan-popup share-popup">
+    <div class="light-box"></div>
+    <div class="container">
+        <div class="header">
+            <img src="<%= static_url %>/images/webview/one_yuan/hand_icon.png" alt="">
+            <span>长按分享给好友或保存邀请卡片</span>
+        </div>
+        <div class="content">
+            <img src="<%= avatar %>" class="one-share-avatar" alt="">
+            <img src="<%= static_url %>/images/webview/one_yuan/page_share.png" alt="">
+            <p class="one-share-title"><span id="nickname"><%= decodeURIComponent(nickname) %></span>邀请您</p>
+            <p class="one-share-desc">1元解锁私人图书馆</p>
+            <img src="<%= qrcode.qrCodeUrl %>" alt="" class="one-share-code">
+        </div>
+    </div>
+</section>
