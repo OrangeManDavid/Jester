@@ -7,6 +7,25 @@
     "license": "MIT",
     "devDependencies": {
         "cypress": "^4.11.0",
+        "eslint-plugin-chai-friendly": "^0.6.0",
+        "eslint-plugin-cypress": "^2.11.1",
+        "mocha": "^7.2.0",
+        "mochawesome": "^6.1.1",
+        "mochawesome-merge": "^4.0.3",
+        "mochawesome-report-generator": "^5.1.0",
         "xlsx": "^0.16.4"
+    },
+    "scripts": {
+        "cypress": "cypress open ",
+        "cy": "cypress run --reporter mochawesome",
+        "cypress:run": "cypress open",
+        "cy:run": "node src/cypress.js",
+        "cypress:open1": "cypress open",
+        "cypress:run1": "cypress run"
+            // cypress run --browser chrome
+            // cypress run --browser /usr/bin/chromium
+    },
+    "dependencies": {
+        "yarn": "^1.22.4"
     }
 }
