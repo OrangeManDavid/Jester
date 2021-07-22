@@ -13,7 +13,7 @@
         "mochawesome": "^6.1.1",
         "mochawesome-merge": "^4.0.3",
         "mochawesome-report-generator": "^5.1.0",
-        "xlsx": "^0.16.4"
+        "xlsx": "^0.17.0"
     },
     "scripts": {
         "cypress": "cypress open ",
